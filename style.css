@@ -1,6 +1,55 @@
+:root {
+  --grey: oklch(80% 3% 200);
+  --collor-accent: oklch(65% 50% 0);
+  --collor-accent-bg: oklch(65% 50% 0 / 25%);
+}
+
 body {
     /* Set line height to 1.5 times the font size
        and use the OS’s UI font as the website font
      */
     font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: auto;
+    padding: 1cm;
    }
+nav {
+    display: flex;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--grey);
+}
+
+nav a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5em;
+}
+
+nav .current {
+  border-bottom-width: 0.4em;
+  border-bottom-style: solid;
+  border-bottom-color: var(--grey);
+  padding: 0.1em;
+  
+}
+nav a:hover{
+  border-bottom-width: 0.4em;
+  border-bottom-style: solid;
+  border-bottom-color: var(--collor-accent);
+  padding-bottom: -0.1em;
+  background-color: var(--collor-accent-bg);
+}
+
+input,textarea,button {
+  font: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label, input, textarea, button {
+  display: block;
+}
+label { margin-block: 1rem;}
